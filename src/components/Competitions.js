@@ -50,7 +50,10 @@ class Competitions extends React.Component {
               if (this.state.sevenComps.includes(competition.id)) {
                 return (
                   <div key={competition.id} className="column is-multiline is-one-quarter-desktop is-one-third-tablet">
-                    <Link to={`/competitions/${competition.code}`}>
+                    <Link to={{
+                      pathname: `/competitions/${competition.code}/standings`,
+                      state: { code: competition.code }
+                    }}>
                       <CompetitionCard
                         {...competition} images={this.state.sevenCompsImages}
                       />
