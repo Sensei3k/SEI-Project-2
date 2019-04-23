@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  background: black;
+  font-family: 'Arial';
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  font-weight: bold;
+  font-style: normal;
+  background: black;
+  height: 45px;
+}
+
+.navbar .navbar-item {
+  font-size: 20px;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.navbar .navbar-item:hover {
+  border: 2px solid gray;
+}
+
+section {
+  width: 100%;
+  text-align: center;
+}
+
+.home-content {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.content {
+  color: white;
+}
+
+.welcome {
+  width: 600px;
+  font-size: 50px;
+}
+
+.gold {
+  color: gold;
+}
+
+.balls {
+  font-size: 100px;
+
+}
