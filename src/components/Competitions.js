@@ -1,6 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 //import CompetitionCard from './CompetitionCard'
 import 'bulma'
+
+import CompetitionCard from './CompetitionCard'
 
 class Competitions extends React.Component {
   constructor() {
@@ -9,10 +12,20 @@ class Competitions extends React.Component {
     this.state = {
       footballData: [],
       classLoaded: false,
-      sevenComps: [2001, 2021, 2002, 2019, 2014, 2017, 2003]
+      //array of id's for the 7 leagues we are interested in
+      sevenComps: [2001, 2021, 2002, 2019, 2014, 2017, 2003, 2015],
+      sevenCompsImages: {
+        2001: '../images/champions-league.jpg',
+        2021: '../images/premier_league-logo.jpg',
+        2002: '../images/bundesliga_logo_.jpg',
+        2019: '../images/serie_a.jpg',
+        2014: '../images/logo-laliga_280.jpg',
+        2017: '../images/primeira-liga-logo.jpg',
+        2003: '../images/eredivisie-logo-football.jpg',
+        2015: '../images/ligue_1.jpg'
+      }
     }
 
-    //this.filterData = this.filterData.bind(this)
   }
 
   componentDidMount() {
@@ -25,28 +38,10 @@ class Competitions extends React.Component {
       .then(res => res.json())
       .then(data => this.setState({ footballData: data.competitions }))
       .then(() => this.setState({ classLoaded: true }))
-
-    //if (this.classLoaded) this.filterData()
-
   }
 
 
-
-  // filterData() {
-  //   // array of this.state.footballData.id
-  //   //const sevenComps = ['2001', '2021', '2002', '2019', '2014', '2017', '2003']
-  //
-  //   this.state.footballData.filter( (element) => {
-  //     if (this.state.sevenComps.contains(element.id)) return element
-  //   })
-  //
-  //   console.log('Hello World')
-  //
-  //   //this.setState({ classLoaded: true })
-  // }
-
   render() {
-    {this.state.classLoaded && console.log(this.state.footballData[20].id)}
     return (
       <section className="section">
         <div className="container">
@@ -55,7 +50,11 @@ class Competitions extends React.Component {
               if (this.state.sevenComps.includes(competition.id)) {
                 return (
                   <div key={competition.id} className="column is-multiline is-one-quarter-desktop is-one-third-tablet">
-                    <div><h3>{competition.name}</h3></div>
+                    <Link to={`/competitions/${competition.code}`}>
+                      <CompetitionCard
+                        {...competition} images={this.state.sevenCompsImages}
+                      />
+                    </Link>
                   </div>
                 )
               }

@@ -30,7 +30,7 @@ class App extends React.Component {
           {/* put navbar here */}
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/competitions/leaguetable" component={LeagueTable} />
+            <Route path="/competitions/:code" component={LeagueTable} />
             <Route path="/competitions" component={Competitions} />
             <Route path="/about" component={About} />
           </Switch>

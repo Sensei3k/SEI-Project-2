@@ -1,19 +1,21 @@
 import React from 'react'
 
-const CompetitionCard = ({ name, image, origin}) => {
+const CompetitionCard = ({ name, area, id, images }) => {
+  const key = images[id]
+
   return (
     <div className="card">
-      <div className="card-header">
-        <h3 className="card-header-title">{name}</h3>
-      </div>
       <div className="card-image">
         <figure className="image">
-          <img src={image} alt={name} />
+          <img src={key} alt={name} />
         </figure>
       </div>
       <div className="card-content">
-        <div className = "content">
-          <p>{origin}</p>
+        <div className = "media">
+          <div className="media-content">
+            <p className="title is-4">{name}</p>
+            <p className="subtitle is-6">{area.name}</p>
+          </div>
         </div>
       </div>
     </div>
