@@ -11,8 +11,6 @@ import Squads from './components/Squads'
 
 import './style.scss'
 
-console.log('JS loaded')
-
 //Football Data App -
 
 class App extends React.Component {
