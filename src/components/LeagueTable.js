@@ -1,10 +1,11 @@
 import React from 'react'
 
+
 class LeagueTable extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state ={
+    this.state = {
       classLoaded: false,
       leagueData: [],
       code: props.location.state.code
@@ -28,6 +29,7 @@ class LeagueTable extends React.Component {
     console.log(this.state.code)
     console.log()
 
+    //refactor the below into its own component - ex. 'LeagueTableDisplay'
     return (
       <section className="section">
         <div className="container">
@@ -55,7 +57,9 @@ class LeagueTable extends React.Component {
                   <tbody>
                     <tr>
                       <th>{club.position}</th>
-                      <td><img src={club.team.crestUrl} alt={club.team.name} className="image is-64x64" /> {club.team.name} <strong>(C)</strong></td>
+
+                      <td><img src={club.team.crestUrl} alt={club.team.name} className="image is-64x64" /> <strong>{club.team.name}</strong></td>
+
                       <td>{club.playedGames}</td>
                       <td>{club.won}</td>
                       <td>{club.draw}</td>

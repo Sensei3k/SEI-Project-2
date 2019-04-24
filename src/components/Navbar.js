@@ -8,8 +8,7 @@ class Navbar extends React.Component {
       <div className="navbar">
         <Link to='/' className="navbar-item">Home</Link>
         <Link to='/competitions' className="navbar-item">Competitions</Link>
-        <Link to='/competitions/leaguetable' className="navbar-item">League Table</Link>
-        <Link to='/about' className="navbar-item">About</Link>
+        <Link to='/clubs' className="navbar-item">Clubs</Link>
       </div>
     )
   }

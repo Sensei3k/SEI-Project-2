@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
 //import CompetitionCard from './CompetitionCard'
 import 'bulma'
 
@@ -12,7 +12,7 @@ class Competitions extends React.Component {
     this.state = {
       footballData: [],
       classLoaded: false,
-      //array of id's for the 7 leagues we are interested in
+      //array of id's for the 7 leagues we are interested in and their corresponding images (not given with API)
       sevenComps: [2001, 2021, 2002, 2019, 2014, 2017, 2003, 2015],
       sevenCompsImages: {
         2001: '../images/champions-league.jpg',
@@ -50,14 +50,9 @@ class Competitions extends React.Component {
               if (this.state.sevenComps.includes(competition.id)) {
                 return (
                   <div key={competition.id} className="column is-multiline is-one-quarter-desktop is-one-third-tablet">
-                    <Link to={{
-                      pathname: `/competitions/${competition.code}/standings`,
-                      state: { code: competition.code }
-                    }}>
-                      <CompetitionCard
-                        {...competition} images={this.state.sevenCompsImages}
-                      />
-                    </Link>
+                    <CompetitionCard
+                      {...competition} images={this.state.sevenCompsImages}
+                    />
                   </div>
                 )
               }
