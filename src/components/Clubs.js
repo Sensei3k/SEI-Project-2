@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 import 'bulma'
 
 import ClubCard from './ClubCard'
@@ -37,9 +37,14 @@ class Clubs extends React.Component {
             {this.state.classLoaded && this.state.clubsData.map(club => {
               return (
                 <div key={club.id} className="column is-multiline is-one-quarter-desktop is-one-third-tablet">
-                  <ClubCard
-                    {...club}
-                  />
+                  <Link to={{
+                    pathname: `/competitions/${this.props.match.params.code}/clubs/${club.shortName}`,
+                    state: { id: club.id }
+                  }}>
+                    <ClubCard
+                      {...club}
+                    />
+                  </Link>
                 </div>
               )
             }

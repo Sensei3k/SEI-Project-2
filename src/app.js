@@ -7,7 +7,7 @@ import Competitions from './components/Competitions'
 import LeagueTable from './components/LeagueTable'
 import Navbar from './components/Navbar'
 import Clubs from './components/Clubs'
-//import Welcome from './components/Welcome'
+import Squads from './components/Squads'
 
 import './style.scss'
 
@@ -24,6 +24,7 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/competitions/:code/standings" component={LeagueTable} />
+            <Route path="/competitions/:code/clubs/:shortName" component={Squads} />
             <Route path="/competitions/:code/clubs" component={Clubs} />
             <Route path="/competitions" component={Competitions} />
           </Switch>

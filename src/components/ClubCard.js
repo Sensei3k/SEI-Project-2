@@ -5,7 +5,7 @@ const ClubCard = ({ name, crestUrl }) => {
   //const key = images[id]
 
   return (
-
+    
     <div className="box">
       <article className="media">
         <div className="media-left">
