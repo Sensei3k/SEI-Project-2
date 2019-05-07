@@ -20,7 +20,7 @@ class Squads extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`http://api.football-data.org/v2/teams/${this.state.id}`, {
+    fetch(`https://api.football-data.org/v2/teams/${this.state.id}`, {
       method: 'GET', //get request
       headers: {
         'X-Auth-Token': '4c4008915f684e03bb77b3e11617f599'
