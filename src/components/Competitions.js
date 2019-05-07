@@ -13,9 +13,8 @@ class Competitions extends React.Component {
       footballData: [],
       classLoaded: false,
       //array of id's for the 7 leagues we are interested in and their corresponding images (not given with API)
-      sevenComps: [2001, 2021, 2002, 2019, 2014, 2017, 2003, 2015],
+      sevenComps: [2021, 2002, 2019, 2014, 2017, 2003, 2015],
       sevenCompsImages: {
-        2001: '../images/champions-league.jpg',
         2021: '../images/premier_league-logo.jpg',
         2002: '../images/bundesliga_logo_.jpg',
         2019: '../images/serie_a.jpg',

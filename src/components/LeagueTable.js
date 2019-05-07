@@ -26,9 +26,6 @@ class LeagueTable extends React.Component {
   }
 
   render() {
-    console.log(this.state.code)
-    console.log()
-
     //refactor the below into its own component - ex. 'LeagueTableDisplay'
     return (
       <section className="section">

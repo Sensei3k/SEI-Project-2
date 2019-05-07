@@ -27,10 +27,8 @@ class Squads extends React.Component {
       }
     })
       .then(res => res.json())
-      .then(data => this.setState({ squadsData: data.squad, squadName: data.name, founded: data.founded }))
+      .then(data => this.setState({ squadsData: data.squad, squadName: data.name, founded: data.founded, venue: data.venue }))
       .then(this.setState({ classLoaded: true }))
-
-
   }
 
 
@@ -39,14 +37,17 @@ class Squads extends React.Component {
     return (
 
       <div>
-        <section className="hero is-primary">
+        <section className="hero is-link">
           <div className="hero-body">
             <div className="container">
               <h1 className="title is-primary">
-                Primary title
+                {this.state.squadName}
               </h1>
-              <h2 className="subtitle is-primary">
-                Primary subtitle
+              <h2 className="subtitle">
+                Venue: {this.state.venue}
+              </h2>
+              <h2 className="subtitle">
+                Founded: {this.state.founded}
               </h2>
             </div>
           </div>
