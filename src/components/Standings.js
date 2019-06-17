@@ -1,5 +1,5 @@
 import React from 'react'
-
+import StandingsCard from './StandingsCard'
 
 class Standings extends React.Component {
   constructor(props) {
@@ -47,36 +47,16 @@ class Standings extends React.Component {
             </thead>
           </table>
           {this.state.classLoaded && this.state.leagueData.standings[0].table.map(club => {
-            console.log(club.team.crestUrl)
-
-            return (
-              <div key={club.team.id} className="column is-multiline is-one-quarter-desktop is-one-third-tablet">
-                <table className="table">
-                  <tbody>
-                    <tr>
-                      <th>{club.position}</th>
-
-                      <td><img src={club.team.crestUrl || '../images/default-crest.png'} alt={club.team.name} className="image is-64x64" /> <strong>{club.team.name}</strong></td>
-
-                      <td>{club.playedGames}</td>
-                      <td>{club.won}</td>
-                      <td>{club.draw}</td>
-                      <td>{club.lost}</td>
-                      <td>{club.goalsFor}</td>
-                      <td>{club.goalsAgainst}</td>
-                      <td>{club.goalDifference}</td>
-                      <td>{club.points}</td>
-                    </tr>
-                  </tbody>
-                </table>
+            console.log(club)
+            return(
+              <div key={club.position}>
+                <StandingsCard
+                  {...club}
+                />
               </div>
             )
-          }
-
-          )}
-
+          })}
         </div>
-
       </section>
     )
   }
