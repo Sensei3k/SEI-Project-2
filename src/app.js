@@ -12,8 +12,6 @@ import Squads from './components/Squads'
 
 import './style.scss'
 
-//Football Data App -
-
 class App extends React.Component {
   render() {
     return (
@@ -30,7 +28,6 @@ class App extends React.Component {
           <Footer />
         </main>
       </Router>
-
     )
   }
 }

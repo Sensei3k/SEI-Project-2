@@ -1,6 +1,4 @@
 import React from 'react'
-
-//import CompetitionCard from './CompetitionCard'
 import 'bulma'
 
 import CompetitionCard from './CompetitionCard'
@@ -37,6 +35,7 @@ class Competitions extends React.Component {
       .then(res => res.json())
       .then(data => this.setState({ footballData: data.competitions }))
       .then(() => this.setState({ classLoaded: true }))
+      .catch(err => console.log(err))
   }
 
 
@@ -57,19 +56,11 @@ class Competitions extends React.Component {
               }
             }
             )}
-
           </div>
-
         </div>
       </section>
-
-
-
-
     )
-
   }
-
 }
 
 export default Competitions

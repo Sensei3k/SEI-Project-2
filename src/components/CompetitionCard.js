@@ -5,7 +5,6 @@ const CompetitionCard = ({ name, area, id, code, images }) => {
   const key = images[id]
 
   return (
-
     <div className="card">
       <div className="card-image">
         <figure className="image">

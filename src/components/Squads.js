@@ -1,7 +1,5 @@
 import React from 'react'
-
 import 'bulma'
-
 import SquadCard from './SquadCard'
 
 class Squads extends React.Component {
@@ -13,14 +11,14 @@ class Squads extends React.Component {
       classLoaded: false,
       id: props.location.state.id,
       squadName: null,
-      founded: null
+      founded: null,
+      errors: {}
     }
-
   }
 
   componentDidMount() {
     fetch(`https://api.football-data.org/v2/teams/${this.state.id}`, {
-      method: 'GET', //get request
+      method: 'GET',
       headers: {
         'X-Auth-Token': '4c4008915f684e03bb77b3e11617f599'
       }
@@ -28,13 +26,11 @@ class Squads extends React.Component {
       .then(res => res.json())
       .then(data => this.setState({ squadsData: data.squad, squadName: data.name, founded: data.founded, venue: data.venue }))
       .then(this.setState({ classLoaded: true }))
+      .catch(err => this.setState({ errors: err.response.data.errors }))
   }
-
-
 
   render() {
     return (
-
       <div>
         <section className="hero is-link">
           <div className="hero-body">
@@ -69,12 +65,7 @@ class Squads extends React.Component {
         </section>
       </div>
     )
-
   }
-
-
-
-
 }
 
 export default Squads

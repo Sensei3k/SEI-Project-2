@@ -1,11 +1,7 @@
 import React from 'react'
-//import { Link } from 'react-router-dom'
 
 const ClubCard = ({ name, crestUrl }) => {
-  //const key = images[id]
-
   return (
-    
     <div className="box">
       <article className="media">
         <div className="media-left">
@@ -23,7 +19,6 @@ const ClubCard = ({ name, crestUrl }) => {
         </div>
       </article>
     </div>
-
   )
 }
 

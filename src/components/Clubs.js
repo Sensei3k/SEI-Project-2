@@ -12,7 +12,6 @@ class Clubs extends React.Component {
       clubsData: [],
       classLoaded: false
     }
-
   }
 
   componentDidMount() {
@@ -25,6 +24,7 @@ class Clubs extends React.Component {
       .then(res => res.json())
       .then(data => this.setState({ clubsData: data.teams }))
       .then(this.setState({ classLoaded: true }))
+      .catch(err => console.log(err))
   }
 
   render() {
@@ -52,10 +52,6 @@ class Clubs extends React.Component {
       </section>
     )
   }
-
-
-
-
 }
 
 export default Clubs

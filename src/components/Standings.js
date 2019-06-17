@@ -10,7 +10,6 @@ class Standings extends React.Component {
       leagueData: [],
       code: props.location.state.code
     }
-
   }
 
   componentDidMount() {
@@ -23,10 +22,10 @@ class Standings extends React.Component {
       .then(res => res.json())
       .then(data => this.setState({ leagueData: data }))
       .then(() => this.setState({ classLoaded: true }))
+      .catch(err => console.log(err))
   }
 
   render() {
-    //refactor the below into its own component - ex. 'LeagueTableDisplay'
     return (
       <section className="section">
         <div className="container">
@@ -47,7 +46,6 @@ class Standings extends React.Component {
             </thead>
           </table>
           {this.state.classLoaded && this.state.leagueData.standings[0].table.map(club => {
-            console.log(club)
             return(
               <div key={club.position}>
                 <StandingsCard
@@ -60,7 +58,6 @@ class Standings extends React.Component {
       </section>
     )
   }
-
 }
 
 export default Standings
