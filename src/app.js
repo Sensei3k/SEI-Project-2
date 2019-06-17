@@ -6,6 +6,7 @@ import Home from './components/Home'
 import Competitions from './components/Competitions'
 import LeagueTable from './components/LeagueTable'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 import Clubs from './components/Clubs'
 import Squads from './components/Squads'
 
@@ -26,6 +27,7 @@ class App extends React.Component {
             <Route path="/competitions/:code/clubs" component={Clubs} />
             <Route path="/competitions" component={Competitions} />
           </Switch>
+          <Footer />
         </main>
       </Router>
 

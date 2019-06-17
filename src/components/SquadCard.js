@@ -1,13 +1,12 @@
 import React from 'react'
 
 const SquadCard = ({ name, nationality, shirtNumber, position }) => {
-  //const key = images[id]
 
   return (
     <div className="card">
       <div className="card-image">
         <figure className="image">
-          <img src='../images/download.png' alt={null} />
+          <img src='../images/default-headshot.png' alt={null} />
         </figure>
       </div>
       <div className="card-content">
