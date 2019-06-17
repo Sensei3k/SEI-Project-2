@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-class StandingsTable extends React.Component {
+class Standings extends React.Component {
   constructor(props) {
     super(props)
 
@@ -83,4 +83,4 @@ class StandingsTable extends React.Component {
 
 }
 
-export default StandingsTable
+export default Standings
