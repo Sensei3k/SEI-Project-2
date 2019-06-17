@@ -14,7 +14,6 @@ class Squads extends React.Component {
       id: props.location.state.id,
       squadName: null,
       founded: null
-
     }
 
   }
