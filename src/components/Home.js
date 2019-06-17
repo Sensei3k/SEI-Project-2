@@ -10,9 +10,6 @@ const Home = () => {
       <div className="balls">⚽️ ⚽️ ⚽️</div>
     </section>
   )
-
-
 }
-
 
 export default Home

@@ -11,8 +11,7 @@ class Squads extends React.Component {
       classLoaded: false,
       id: props.location.state.id,
       squadName: null,
-      founded: null,
-      errors: {}
+      founded: null
     }
   }
 
@@ -26,7 +25,7 @@ class Squads extends React.Component {
       .then(res => res.json())
       .then(data => this.setState({ squadsData: data.squad, squadName: data.name, founded: data.founded, venue: data.venue }))
       .then(this.setState({ classLoaded: true }))
-      .catch(err => this.setState({ errors: err.response.data.errors }))
+      .catch(err => console.log(err))
   }
 
   render() {
