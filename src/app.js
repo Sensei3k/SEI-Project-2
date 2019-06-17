@@ -4,7 +4,7 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Home from './components/Home'
 import Competitions from './components/Competitions'
-import LeagueTable from './components/LeagueTable'
+import StandingsTable from './components/StandingsTable'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Clubs from './components/Clubs'
@@ -22,7 +22,7 @@ class App extends React.Component {
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/competitions/:code/standings" component={LeagueTable} />
+            <Route path="/competitions/:code/standings" component={StandingsTable} />
             <Route path="/competitions/:code/clubs/:shortName" component={Squads} />
             <Route path="/competitions/:code/clubs" component={Clubs} />
             <Route path="/competitions" component={Competitions} />

@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-class LeagueTable extends React.Component {
+class StandingsTable extends React.Component {
   constructor(props) {
     super(props)
 
@@ -15,7 +15,7 @@ class LeagueTable extends React.Component {
 
   componentDidMount() {
     fetch(`https://api.football-data.org/v2/competitions/${this.state.code}/standings`, {
-      method: 'GET', //get request
+      method: 'GET',
       headers: {
         'X-Auth-Token': '4c4008915f684e03bb77b3e11617f599'
       }
@@ -47,6 +47,7 @@ class LeagueTable extends React.Component {
             </thead>
           </table>
           {this.state.classLoaded && this.state.leagueData.standings[0].table.map(club => {
+            console.log(club.team.crestUrl)
 
             return (
               <div key={club.team.id} className="column is-multiline is-one-quarter-desktop is-one-third-tablet">
@@ -55,7 +56,7 @@ class LeagueTable extends React.Component {
                     <tr>
                       <th>{club.position}</th>
 
-                      <td><img src={club.team.crestUrl} alt={club.team.name} className="image is-64x64" /> <strong>{club.team.name}</strong></td>
+                      <td><img src={club.team.crestUrl || '../images/default-crest.png'} alt={club.team.name} className="image is-64x64" /> <strong>{club.team.name}</strong></td>
 
                       <td>{club.playedGames}</td>
                       <td>{club.won}</td>
@@ -82,4 +83,4 @@ class LeagueTable extends React.Component {
 
 }
 
-export default LeagueTable
+export default StandingsTable
