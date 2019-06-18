@@ -3,11 +3,12 @@ import React from 'react'
 const Home = () => {
 
   return (
-    <section>
+    <section className="background-style">
       <div className="home-content">
-        <div className="content welcome">Welcome to the <span className="gold">Football Data Centre</span>, where you can follow all your favorite clubs. </div>
+        <div className="content welcome"><div className="title">Football <br/> Data Centre</div>
+          <div className="welcome-subtitle">Where you can find all the stats<br/> for your favourite clubs!</div>
+        </div>
       </div>
-      <div className="balls">⚽️ ⚽️ ⚽️</div>
     </section>
   )
 }

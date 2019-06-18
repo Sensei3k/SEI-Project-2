@@ -29,7 +29,7 @@ class Clubs extends React.Component {
 
   render() {
     return (
-      <section className="section">
+      <section className="section background-style">
         <div className="container">
           <div className="columns is-multiline">
             {this.state.classLoaded && this.state.clubsData.map(club => {

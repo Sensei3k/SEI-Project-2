@@ -27,7 +27,7 @@ class Standings extends React.Component {
 
   render() {
     return (
-      <section className="section">
+      <section className="section background-style">
         <div className="container">
           <table className="table">
             <thead>

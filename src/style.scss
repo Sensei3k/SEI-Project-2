@@ -1,16 +1,14 @@
 * {
   box-sizing: border-box;
-  //background: black;
   font-family: 'Arial';
 }
 
 main {
-  background: black;
+  // background: black;
 }
 
 .navbar {
   display: flex;
-  justify-content: center;
   align-content: space-between;
   font-weight: bold;
   font-style: normal;
@@ -21,15 +19,24 @@ main {
 .navbar .navbar-item {
   font-size: 20px;
   padding: 10px 20px;
-  // color: black;
   color: white;
   text-decoration: none;
   margin: 0 10px;
 }
 
+.icon {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  font-size: 30px;
+}
+
 .navbar .navbar-item:hover {
-  border: 2px solid gold;
   background: black;
+}
+
+a.navbar-item:hover {
+  border: 0px solid black;
 }
 
 section {
@@ -38,15 +45,50 @@ section {
 }
 
 .home-content {
-  height: 400px;
+  height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.background-style {
+  background-image: url(images/football-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .welcome {
-  width: 600px;
-  font-size: 50px;
+  font-family: Tahoma;
+  width: 650px;
+  font-size: 35px;
+  border: 4px solid black;
+  border-radius: 5px;
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  background-image: url(images/soccer-title-2.gif);
+  background-size: contain;
+  // background-repeat: no-repeat;
+  padding: 30px 30px 70px 30px;
+}
+
+.welcome-subtitle {
+  font-family: Tahoma;
+}
+
+.title {
+  font-family: Tahoma;
+  color: white;
+  font-size: 60px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.footer {
+  color: white;
+  background-color: black;
+  padding: 1.2rem 1.5rem 1.2rem;
+}
+
+.footer-data {
+  color: white;
 }
 
 .gold {
@@ -55,5 +97,4 @@ section {
 
 .balls {
   font-size: 100px;
-
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import 'bulma'
+
 import SquadCard from './SquadCard'
 
 class Squads extends React.Component {
@@ -46,7 +47,7 @@ class Squads extends React.Component {
             </div>
           </div>
         </section>
-        <section className="section">
+        <section className="section background-style">
           <div className="container">
             <div className="columns is-multiline">
               {this.state.classLoaded && this.state.squadsData.map(player => {
