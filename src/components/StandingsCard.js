@@ -7,7 +7,7 @@ const StandingsCard = ({ team, position, playedGames, won, draw, lost, goalsFor,
         <tbody>
           <tr>
             <th>{position}</th>
-            <td>{<img src={team.crestUrl} alt={team.name} className="image is-64x64"
+            <td className="team-data">{<img src={team.crestUrl} alt={team.name} className="image is-64x64"
               onError={(e)=>{
                 e.target.onerror = null; e.target.src='../images/default-crest.png'
               }} />}

@@ -28,12 +28,12 @@ class Standings extends React.Component {
   render() {
     return (
       <section className="section background-style">
-        <div className="container">
+        <div className="container table-bg">
           <table className="table">
             <thead>
               <tr>
                 <th><abbr title="Position">Pos</abbr></th>
-                <th>Team</th>
+                <th className="team-header">Team</th>
                 <th><abbr title="Played">Pld</abbr></th>
                 <th><abbr title="Won">W</abbr></th>
                 <th><abbr title="Drawn">D</abbr></th>
