@@ -43,7 +43,7 @@ class Competitions extends React.Component {
     return (
       <section className="section background-style">
         <div className="container">
-          <div className="columns is-multiline">
+          <div className="rows is-multiline comp-center">
             {this.state.classLoaded && this.state.footballData.map(competition => {
               if(this.competitions.sevenComps.includes(competition.id)) {
                 return (

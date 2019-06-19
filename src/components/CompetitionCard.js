@@ -5,31 +5,28 @@ const CompetitionCard = ({ name, area, id, code, images }) => {
   const key = images[id]
 
   return (
-    <div className="card">
-      <div className="card-image">
-        <figure className="image">
-          <img src={key} alt={name} />
-        </figure>
-      </div>
-      <div className="card-content">
-        <div className = "media">
-          <div className="media-content">
-            <p className="title is-4">{name}</p>
-            <p className="subtitle is-6">{area.name}</p>
-            <hr/>
-            <Link to={{
-              pathname: `/competitions/${code}/standings`,
-              state: { code: code }
-            }}>
-              <p className="subtitle is-6">Standings</p>
-            </Link>
-            <Link to={{
-              pathname: `/competitions/${code}/clubs`,
-              state: {code: code}
-            }}>
-              <p className="subtitle is-6">Clubs</p>
-            </Link>
-          </div>
+    <div className="comp-card">
+      <figure>
+        <img src={key} alt={name} className="comp-image"/>
+      </figure>
+      <div className="comp-content">
+        <div className="league-area">
+          <p className="title is-4">{name}</p>
+          <p className="subtitle is-5">{area.name}</p>
+        </div>
+        <div>
+          <Link to={{
+            pathname: `/competitions/${code}/standings`,
+            state: { code: code }
+          }}>
+            <p className="subtitle is-5 league-link">Standings</p>
+          </Link>
+          <Link to={{
+            pathname: `/competitions/${code}/clubs`,
+            state: {code: code}
+          }}>
+            <p className="subtitle is-5 league-link">Clubs</p>
+          </Link>
         </div>
       </div>
     </div>
