@@ -12,7 +12,8 @@ class Squads extends React.Component {
       classLoaded: false,
       id: props.location.state.id,
       squadName: null,
-      founded: null
+      founded: null,
+      crestUrl: null
     }
   }
 
@@ -24,7 +25,7 @@ class Squads extends React.Component {
       }
     })
       .then(res => res.json())
-      .then(data => this.setState({ squadsData: data.squad, squadName: data.name, founded: data.founded, venue: data.venue }))
+      .then(data => this.setState({ squadsData: data.squad, squadName: data.name, founded: data.founded, venue: data.venue, crestUrl: data.crestUrl }))
       .then(this.setState({ classLoaded: true }))
       .catch(err => console.log(err))
   }
@@ -43,6 +44,9 @@ class Squads extends React.Component {
               </h2>
               <h2 className="subtitle">
                 Founded: {this.state.founded}
+              </h2>
+              <h2 className="subtitle">
+                <img src={this.state.crestUrl} alt="Crest" className="crest"/>
               </h2>
             </div>
           </div>
