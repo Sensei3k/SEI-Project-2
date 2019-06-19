@@ -1,5 +1,6 @@
 import React from 'react'
 import StandingsCard from './StandingsCard'
+import {Link} from 'react-router-dom'
 
 class Standings extends React.Component {
   constructor(props) {
@@ -48,9 +49,14 @@ class Standings extends React.Component {
           {this.state.classLoaded && this.state.leagueData.standings[0].table.map(club => {
             return(
               <div key={club.position}>
-                <StandingsCard
-                  {...club}
-                />
+                <Link to={{
+                  pathname: `/competitions/${this.props.match.params.code}/clubs/${club.team.id}`,
+                  state: { id: club.id }
+                }}>
+                  <StandingsCard
+                    {...club}
+                  />
+                </Link>
               </div>
             )
           })}

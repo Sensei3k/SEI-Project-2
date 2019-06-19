@@ -155,7 +155,7 @@ section {
 
 .table-bg {
   background-color: white;
-  width: 650px;
+  width: 620px;
   border: 5px solid black;
 }
 
@@ -175,4 +175,9 @@ td.team-data {
 
 td {
   padding: 0px 20px;
+}
+
+.row-hover:hover {
+  background-color: black;
+  color: white;
 }

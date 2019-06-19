@@ -21,7 +21,7 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/competitions/:code/standings" component={Standings} />
-            <Route path="/competitions/:code/clubs/:shortName" component={Squads} />
+            <Route path="/competitions/:code/clubs/:id" component={Squads} />
             <Route path="/competitions/:code/clubs" component={Clubs} />
             <Route path="/competitions" component={Competitions} />
           </Switch>

@@ -36,7 +36,7 @@ class Clubs extends React.Component {
               return (
                 <div key={club.id} className="column is-multiline is-one-quarter-desktop is-one-third-tablet">
                   <Link to={{
-                    pathname: `/competitions/${this.props.match.params.code}/clubs/${club.shortName}`,
+                    pathname: `/competitions/${this.props.match.params.code}/clubs/${club.id}`,
                     state: { id: club.id }
                   }}>
                     <ClubCard

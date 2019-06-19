@@ -5,7 +5,7 @@ const StandingsCard = ({ team, position, playedGames, won, draw, lost, goalsFor,
     <div key={team.id} className="column is-multiline is-one-quarter-desktop is-one-third-tablet">
       <table className="table">
         <tbody>
-          <tr>
+          <tr className="row-hover">
             <th>{position}</th>
             <td className="team-data">{<img src={team.crestUrl} alt={team.name} className="image is-64x64"
               onError={(e)=>{
