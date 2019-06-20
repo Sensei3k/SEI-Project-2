@@ -28,13 +28,14 @@ class Clubs extends React.Component {
   }
 
   render() {
+    const classes = 'column is-multiline is-one-quarter-desktop is-one-third-tablet'
     return (
       <section className="section background-style">
         <div className="container">
           <div className="columns is-multiline">
             {this.state.classLoaded && this.state.clubsData.map(club => {
               return (
-                <div key={club.id} className="column is-multiline is-one-quarter-desktop is-one-third-tablet">
+                <div key={club.id} className={classes}>
                   <Link to={{
                     pathname: `/competitions/${this.props.match.params.code}/clubs/${club.id}`,
                     state: { id: club.id }

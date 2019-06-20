@@ -3,7 +3,6 @@ import 'bulma'
 
 import CompetitionCard from './CompetitionCard'
 
-
 class Competitions extends React.Component {
   constructor() {
     super()
@@ -41,6 +40,7 @@ class Competitions extends React.Component {
 
 
   render() {
+    const classes = 'column is-multiline is-one-quarter-desktop is-one-third-tablet'
     return (
       <section className="section background-style">
         <div className="container">
@@ -48,7 +48,7 @@ class Competitions extends React.Component {
             {this.state.classLoaded && this.state.footballData.map(competition => {
               if(this.competitions.sevenComps.includes(competition.id)) {
                 return (
-                  <div key={competition.id} className="column is-multiline is-one-quarter-desktop is-one-third-tablet">
+                  <div key={competition.id} className={classes}>
                     <CompetitionCard
                       {...competition} images={this.competitions.sevenCompsImages}
                     />

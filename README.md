@@ -9,6 +9,7 @@
 * JavaScript (ES6)
 * HTML5
 * CSS
+* Bulma
 * GitHub
 
 ## Installation

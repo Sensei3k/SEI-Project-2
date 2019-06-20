@@ -29,6 +29,7 @@ class Squads extends React.Component {
   }
 
   render() {
+    const classes = 'column is-multiline is-one-quarter-desktop is-one-third-tablet'
     return (
       <div>
         <section className="hero is-link">
@@ -54,7 +55,7 @@ class Squads extends React.Component {
             <div className="columns is-multiline">
               {this.state.classLoaded && this.state.squadsData.map(player => {
                 return (
-                  <div key={player.id} className="column is-multiline is-one-quarter-desktop is-one-third-tablet">
+                  <div key={player.id} className={classes}>
                     <SquadCard
                       {...player}
                     />

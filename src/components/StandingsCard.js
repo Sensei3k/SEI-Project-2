@@ -2,7 +2,7 @@ import React from 'react'
 
 const StandingsCard = ({ team, position, playedGames, won, draw, lost, goalsFor, goalsAgainst, goalDifference, points }) => {
   return (
-    <div key={team.id} className="column is-multiline is-one-quarter-desktop is-one-third-tablet">
+    <div key={team.id} className="column is-multiline">
       <table className="table">
         <tbody>
           <tr className="row-hover">
