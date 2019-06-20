@@ -40,7 +40,7 @@ class Competitions extends React.Component {
 
 
   render() {
-    const classes = 'column is-multiline is-one-quarter-desktop is-one-third-tablet'
+    const classes = 'column is-multiline is-one-quarter-desktop is-one-third-tablet animated bounceInLeft'
     return (
       <section className="section background-style">
         <div className="container">

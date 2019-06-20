@@ -29,7 +29,7 @@ class Standings extends React.Component {
   render() {
     return (
       <section className="section background-style">
-        <div className="container table-bg">
+        <div className="container table-bg animated bounceInRight">
           <table className="table">
             <thead>
               <tr>
