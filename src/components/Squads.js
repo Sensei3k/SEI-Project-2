@@ -11,9 +11,7 @@ class Squads extends React.Component {
       squadsData: [],
       classLoaded: false,
       id: props.location.state.id,
-      squadName: null,
-      founded: null,
-      crestUrl: null
+      data: {}
     }
   }
 
@@ -25,7 +23,7 @@ class Squads extends React.Component {
       }
     })
       .then(res => res.json())
-      .then(data => this.setState({ squadsData: data.squad, squadName: data.name, founded: data.founded, venue: data.venue, crestUrl: data.crestUrl }))
+      .then(data => this.setState({ squadsData: data.squad, data: data }))
       .then(this.setState({ classLoaded: true }))
       .catch(err => console.log(err))
   }
@@ -37,16 +35,16 @@ class Squads extends React.Component {
           <div className="hero-body">
             <div className="container">
               <h1 className="title is-primary">
-                {this.state.squadName}
+                {this.state.data.name}
               </h1>
               <h2 className="subtitle">
-                Venue: {this.state.venue}
+                Venue: {this.state.data.venue}
               </h2>
               <h2 className="subtitle">
-                Founded: {this.state.founded}
+                Founded: {this.state.data.founded}
               </h2>
               <h2 className="subtitle">
-                <img src={this.state.crestUrl} alt="Crest" className="crest"/>
+                <img src={this.state.data.crestUrl} alt="Crest" className="crest"/>
               </h2>
             </div>
           </div>
