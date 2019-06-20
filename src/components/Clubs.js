@@ -18,7 +18,7 @@ class Clubs extends React.Component {
     fetch(`https://api.football-data.org/v2/competitions/${this.props.match.params.code}/teams?2019`, {
       method: 'GET',
       headers: {
-        'X-Auth-Token': '4c4008915f684e03bb77b3e11617f599'
+        'X-Auth-Token': process.env.FOOTBALL_TOKEN
       }
     })
       .then(res => res.json())
