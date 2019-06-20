@@ -21,7 +21,7 @@ For our second project, we were put into groups of two and given a timeframe of 
 
 ## Project Overview
 
-![Football Data Centre](https://i.imgur.com/zi6CrOw.gif)
+![Football Data Centre](https://i.imgur.com/Mye7b7g.gif)
 
 ## Process Breakdown
 The process of creating this application can be broken down into a series of stages as follows:
