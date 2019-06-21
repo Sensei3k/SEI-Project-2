@@ -20,7 +20,7 @@
 For our second project, we were put into groups of two and given a timeframe of two days to complete a front-end application using React. We were to pick a theme, and implement a relevant API to populate our application with data. We were also required to use Webpack, as our module builder, for bundling and deployment purposes.
 
 ## Project Overview
-We decided to create an application that displays up-to-date data for five professional football leagues in Europe. By implementing the 'football-data.org' API, we were able to display stats for the clubs in each league, the standings in each league, and the roster of each club.
+We decided to create an application that displays up-to-date data for five professional football leagues in Europe. By implementing the football-data.org API, we were able to display stats for the clubs and standings in each league, and the roster of each club.
 
 #### Website Navigation
 ![Football Data Centre](https://i.imgur.com/yBPlFF7.gif)
@@ -29,7 +29,7 @@ We decided to create an application that displays up-to-date data for five profe
 The main purpose of this project was to develop an introductory understanding of the React framework, as well as how to make AJAX requests to APIs and utilize the response. A big takeaway from this exercise was related to how data exists in React. We learned that in a React component, there are two main types of data: 'state' and 'props'. 'State' is data specific to that component, directly initialized within that component. 'Props' is data passed to a component by another component, usually a parent or sibling component.
 
 #### React Lifecycle
-The React lifecycle methods were another crucial topic we gained experience with. The basic setup of each React component starts with defining a class that is an extension of 'React.component'. This is followed by creating the `constructor()` function, calling the `super()` function inside to pull down all relevant properties from the base class constructor function. The state of the component is also defined within the constructor function. Next, the `render()` function, which is the only mandatory method for a React component, is defined. The `render()` function is responsible for rendering the content of the component to the user interface. The `render()` function runs during the mounting and updating of a component. When a component loads, the `componentDidMount()` function runs once and the component then re-renders. Anytime the state of the component is updated, the `componentDidUpdate()` function runs, and the component then re-renders.
+The React lifecycle methods were another crucial topic we gained experience with. The basic setup of each React component starts with defining a class that is an extension of `React.component`. This is followed by creating the `constructor()` function and calling the `super()` function inside to pull down all relevant properties and methods from the base class. The state of the component is also defined within the constructor function. Next, the `render()` function, which is the only mandatory method for a React component, is defined. The `render()` function is responsible for rendering the content of the component to the user interface. The `render()` function runs during the mounting and updating of a component. When a component loads, the `componentDidMount()` function runs once and the component then re-renders. Anytime the state of the component is updated, the `componentDidUpdate()` function runs, and the component then re-renders.
 
 #### React Lifecycle Diagram
 ![React Lifecycle](https://i.imgur.com/mVMz8AH.png)
@@ -60,7 +60,7 @@ The process of creating this application can be broken down into a series of sta
 #### Development & Testing Stages:
 1. Setup a backbone `index.html` template, in which to render the components.
 2. Build a router in the `app.js` file, containing the paths to each React component.
-3. Develop and test each component.
+3. Develop, test, and refactor each component.
 4. Style the application.
 
 #### Deployment & Presentation Stages:
@@ -71,4 +71,4 @@ The process of creating this application can be broken down into a series of sta
 The biggest challenge of this project that we faced was related to time management. Given only two days to create our first React application, it was difficult to plan exactly how much content and functionality we had time to achieve. We decided rather than working separately and then merging our work into one app, we would pair code through the whole project. This way, we could ensure we agreed before adding new features and we could brainstorm about different approaches to solving problems.
 
 ## Future Add-ons
-One extra feature we would have liked to add to this project is a search bar where the user can search for a specific football player. The search bar would have a dropdown of suggestions that the user could choose from. The user would then click on the player of interest and be redirected to a new page displaying that player's stats. Due to timing constraints, we did not get the opportunity to add these features.
+One extra feature we would have liked to add to this project is a search bar where the user can search for a specific football player. The search bar would have a dropdown of suggestions that the user could choose from. The user would then click on the player of interest and be redirected to a new page displaying that player's stats. Due to timing constraints, we did not get the opportunity to add this feature.
