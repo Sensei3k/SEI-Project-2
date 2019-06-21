@@ -33,7 +33,7 @@ class Competitions extends React.Component {
       }
     })
       .then(res => res.json())
-      .then(data => this.setState({ footballData: data.competitions }))
+      .then(data => this.setState({ footballData: data.competitions}))
       .then(() => this.setState({ classLoaded: true }))
       .catch(err => console.log(err))
   }
