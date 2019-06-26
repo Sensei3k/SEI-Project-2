@@ -24,7 +24,16 @@ module.exports = {
       { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.css$/, loader: ['style-loader', 'css-loader'] },
       { test: /\.s(a|c)ss$/, loader: ['style-loader', 'css-loader', 'sass-loader'] },
-      { test: /\.(jpe?g|png|gif|svg)$/, loader: 'file-loader' }
+      { test: /\.(jpe?g|png|gif|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: './images/[name].[ext]'
+            }
+          }
+        ]
+      }
     ]
   },
   devServer: {
