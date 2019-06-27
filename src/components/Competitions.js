@@ -16,11 +16,11 @@ class Competitions extends React.Component {
     this.competitions = {
       sevenComps: [2021, 2002, 2019, 2014, 2015],
       sevenCompsImages: {
-        2021: './images/premier_league-logo.jpg',
-        2002: './images/bundesliga_logo_.jpg',
-        2019: './images/serie_a.jpg',
-        2014: './images/logo-laliga_280.jpg',
-        2015: './images/ligue_1.jpg'
+        2021: '../images/premier_league-logo.jpg',
+        2002: '../images/bundesliga_logo_.jpg',
+        2019: '../images/serie_a.jpg',
+        2014: '../images/logo-laliga_280.jpg',
+        2015: '../images/ligue_1.jpg'
       }
     }
   }
