@@ -8,7 +8,7 @@
     "serve": "webpack-dev-server --mode=development",
     "build": "webpack -p",
     "deploy": "npm run build && gh-pages -d dist",
-    "push": "git push origin master && git push project 2master"
+    "push": "git push origin master && git push project2 master"
   },
   "author": "",
   "license": "ISC",
