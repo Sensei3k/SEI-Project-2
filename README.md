@@ -26,7 +26,7 @@ We decided to create an application that displays up-to-date data for five profe
 ![Football Data Centre](https://i.imgur.com/yBPlFF7.gif)
 
 #### Key Takeaways
-The main purpose of this project was to develop an introductory understanding of the React framework, as well as how to make AJAX requests to APIs and utilize the response. A big takeaway from this exercise was related to how data exists in React. We learned that in a React component, there are two main types of data: 'state' and 'props'. 'State' is data specific to that component, directly initialized within that component. 'Props' is data passed to a component by another component, usually a parent or sibling component.
+The main purpose of this project was to develop an introductory understanding of the React framework, as well as how to make AJAX requests to APIs and utilise the response. A big takeaway from this exercise was related to how data exists in React. We learned that in a React component, there are two main types of data: `state` and `props`. `State` is data specific to that component, directly initialised within that component. `Props` is data passed to a component by another component, usually a parent or sibling component.
 
 #### React Lifecycle
 The React lifecycle methods were another crucial topic we gained experience with. The basic setup of each React component starts with defining a class that is an extension of `React.component`. This is followed by creating the `constructor()` function and calling the `super()` function inside to pull down all relevant properties and methods from the base class. The state of the component is also defined within the constructor function. Next, the `render()` function, which is the only mandatory method for a React component, is defined. The `render()` function is responsible for rendering the content of the component to the user interface. The `render()` function runs during the mounting and updating of a component. When a component loads, the `componentDidMount()` function runs once and the component then re-renders. Anytime the state of the component is updated, the `componentDidUpdate()` function runs, and the component then re-renders.
@@ -66,6 +66,39 @@ The process of creating this application can be broken down into a series of sta
 #### Deployment & Presentation Stages:
 1. Deploy the application to GitHub Pages.
 2. Present our application to the class.
+
+## Wins
+Taking this Hackathon challenge was very interesting and fun for us. It really cemented our newly learned skills on React and how to consume 3rd Party APIs.
+
+Learning how to deconstruct our `props / this.props` was really fun and interesting. This made it easier for us to keep track of our `props`, improved readability taking away long chunky lines of code, making it look nicer and more succinct. We could also easily pass props to various components that we were working on.
+
+``````js
+const SquadCard = ({ name, nationality, shirtNumber, position }) => {
+
+  return (
+    <div className="card">
+      <div className="card-image">
+        <figure className="image">
+          <img src='../images/default-headshot.png' alt={null} />
+        </figure>
+      </div>
+      <div className="card-content">
+        <div className = "media">
+          <div className="media-content">
+            <p className="title is-4">{name}</p>
+            <p className="subtitle is-6">Number: {shirtNumber}</p>
+            <p className="subtitle is-6">Position: {position}</p>
+            <p className="subtitle is-6">Nationality: {nationality}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+``````
+
+Getting our images to load both in development mode and when deployed was another win, as we found out it didn't load initially due to us using a webpack server in development and a compiler before deploying.
+
 
 ## Challenges
 The biggest challenge of this project that we faced was related to time management. Given only two days to create our first React application, it was difficult to plan exactly how much content and functionality we had time to achieve. We decided rather than working separately and then merging our work into one app, we would pair code through the whole project. This way, we could ensure we agreed before adding new features and we could brainstorm about different approaches to solving problems.
